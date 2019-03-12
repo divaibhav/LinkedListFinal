@@ -200,6 +200,11 @@ public class LinkedListMain {
         list.display();
         list.deleteAfterNode(n2);
         list.display();
+        list.insert(n5);
+        list.display();
+        list.deleteFromBeginning();
+
+        list.display();
     }
 
 }
