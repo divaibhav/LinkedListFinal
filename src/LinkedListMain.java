@@ -22,6 +22,13 @@ class MySinglyLinkedList{
         }
     }
 
+    //insert at begining
+    void insertAtBeginning(Node node){
+        node.next=head;
+        head=node;
+    }
+
+
 }
 public class LinkedListMain {
 }
