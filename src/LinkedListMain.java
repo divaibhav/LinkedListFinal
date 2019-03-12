@@ -86,6 +86,35 @@ class MySinglyLinkedList{
         }
     }
 
+    /*
+    deleting a node from singly linked list require a reference to previous node as
+    we need to change the next reference of previous node to the next reference of
+    the current node
+     */
+    //to delete a node from last
+    void delete(){
+        if(head==null){
+            System.out.println("empty list");
+        }
+        else{
+            Node current=head;
+            Node previous=null;
+            while(current.next!=null){
+                previous=current;
+                current=current.next;
+            }
+            //if there only one node in list
+            if(current==head){
+                head=null;
+
+            }
+            else {
+                previous.next = null;
+            }
+        }
+    }
+
+
 
 }
 public class LinkedListMain {
@@ -115,8 +144,10 @@ public class LinkedListMain {
         //inserting n3 that is 300 after n1 that is 100
         list.insertAfterNode(n3,n1);
         list.display();
-        //inserting n4 that is 400 beofre n2 tthat is 200
+        //inserting n4 that is 400 before n2 tthat is 200
         list.insertBeforeNode(n4,n2);
+        list.display();
+        list.delete();
         list.display();
     }
 
