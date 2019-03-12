@@ -69,9 +69,25 @@ class MySinglyLinkedList{
         }
     }
 
+    // to display linked list
+    void display(){
+        System.out.println("mylist:");
+        if(head==null){
+            System.out.println("empty list");
+        }
+        else{
+            Node temp=head;
+            while(temp!=null){
+                System.out.print(temp.data+"--->");
+                temp=temp.next;
+            }
+            System.out.println("null");
 
+        }
+    }
 
 
 }
 public class LinkedListMain {
+
 }
