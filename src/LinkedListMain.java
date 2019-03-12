@@ -145,6 +145,26 @@ class MySinglyLinkedList{
         }
     }
 
+    //to delete after the given node
+    void deleteAfterNode(Node afternode){
+        if(head==null){
+            System.out.println("empty list");
+        }
+        else{
+            Node temp=head;
+
+            while(temp.data!=afternode.data){
+                temp=temp.next;
+            }
+            if(temp.next==null){
+                System.out.println("after node is the last node");
+            }
+            else{
+                temp.next=temp.next.next;
+            }
+        }
+    }
+
 
 
 }
@@ -178,7 +198,7 @@ public class LinkedListMain {
         //inserting n4 that is 400 before n2 tthat is 200
         list.insertBeforeNode(n4,n2);
         list.display();
-        list.deleteBeforeNode(n2);
+        list.deleteAfterNode(n2);
         list.display();
     }
 
