@@ -113,6 +113,15 @@ class MySinglyLinkedList{
             }
         }
     }
+    // to delete from beginning
+    void deleteFromBeginning(){
+        if(head==null){
+            System.out.println("empty list");
+        }
+        else{
+            head=head.next;
+        }
+    }
 
 
 
@@ -147,7 +156,7 @@ public class LinkedListMain {
         //inserting n4 that is 400 before n2 tthat is 200
         list.insertBeforeNode(n4,n2);
         list.display();
-        list.delete();
+        list.deleteFromBeginning();
         list.display();
     }
 
