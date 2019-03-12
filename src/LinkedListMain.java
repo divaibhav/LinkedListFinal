@@ -54,6 +54,22 @@ class MySinglyLinkedList{
         }
 
     }
+    //insert after a node
+    void insertAfterNode(Node node, Node afternode){
+        if(head==null){
+            System.out.println("empty list");
+        }
+        else{
+            Node temp=head;
+            while(temp.data!=afternode.data){
+                temp=temp.next;
+            }
+            node.next=temp.next;
+            temp.next=node;
+        }
+    }
+
+
 
 
 }
