@@ -28,6 +28,33 @@ class MySinglyLinkedList{
         head=node;
     }
 
+    //insert before a node assuming the before node is prenet in list
+    void insertBeforeNode(Node node, Node beforenode){
+        if(head==null){
+            System.out.println("list emplty");
+        }
+        else{
+            Node temp=head;
+            Node previous=null;
+            while(temp.data!=beforenode.data){
+                previous=temp;
+                temp=temp.next;
+
+            }
+            //checking ifbeforenode is the first node then we have to insert at beginning
+            if(temp==head){
+                node.next=head;
+                head=node;
+            }
+            else{
+                node.next=temp;
+                previous.next=temp;
+
+            }
+        }
+
+    }
+
 
 }
 public class LinkedListMain {
