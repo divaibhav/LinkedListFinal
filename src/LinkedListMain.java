@@ -28,7 +28,7 @@ class MySinglyLinkedList{
         head=node;
     }
 
-    //insert before a node assuming the before node is prenet in list
+    //insert before a node assuming the before node is present in list
     void insertBeforeNode(Node node, Node beforenode){
         if(head==null){
             System.out.println("list emplty");
@@ -140,7 +140,7 @@ class MySinglyLinkedList{
                 head=current.next;
             }
             else {
-                previous.next = temp.next;
+                previous.next = temp;
             }
         }
     }
@@ -164,6 +164,7 @@ class MySinglyLinkedList{
             }
         }
     }
+
 
 
 
@@ -198,12 +199,14 @@ public class LinkedListMain {
         //inserting n4 that is 400 before n2 tthat is 200
         list.insertBeforeNode(n4,n2);
         list.display();
-        list.deleteAfterNode(n2);
+        System.out.println("test");
+        list.deleteBeforeNode(n3);
+        //list.deleteAfterNode(n2);
         list.display();
         list.insert(n5);
         list.display();
-        list.deleteFromBeginning();
-
+        //list.deleteFromBeginning();
+        //list.sort();
         list.display();
     }
 
